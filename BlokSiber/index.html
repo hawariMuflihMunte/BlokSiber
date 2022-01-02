@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--Import Fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -16,20 +28,246 @@
     </script>
 
     <!-- Brand Logo: BlokSiber -->
-    <link rel="icon" type="image/ico" href="assets/icons/16BlokSiber.ico" sizes="16x16">
-    <link rel="icon" type="image/ico" href="assets/icons/32BlokSiber.ico" sizes="32x32">
-    <link rel="icon" type="image/ico" href="assets/icons/96BlokSiber.ico" sizes="96x96">
+    <link
+      rel="icon"
+      type="image/ico"
+      href="assets/icons/16BlokSiber.ico"
+      sizes="16x16">
+    <link
+      rel="icon"
+      type="image/ico"
+      href="assets/icons/32BlokSiber.ico"
+      sizes="32x32">
+    <link
+      rel="icon"
+      type="image/ico"
+      href="assets/icons/96BlokSiber.ico"
+      sizes="96x96">
 
     <title>BlokSiber</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style type="text/css" media="screen">
+      :root {
+        --gothic: #6A9BA7;
+        --carnation: #FB5F5F;
+        --mandys-pink: #F2AEAE;
+        --ming: #39747C;
+        --baby-powder: #FDFFFC;
+      }
+
+      .gothic {
+        background-color: var(--gothic);
+      }
+
+      .gothic-text {
+        color: var(--gothic);
+      }
+
+      .carnation {
+        background-color: var(--carnation);
+      }
+
+      .carnation-text {
+        color: var(--carnation);
+      }
+
+      .mandys-pink {
+        background-color: var(--mandys-pink);
+      }
+
+      .mandys-pink-text {
+        color: var(--mandys-pink);
+      }
+
+      .ming {
+        background-color: var(--ming);
+      }
+
+      .ming-text {
+        color: var(--ming);
+      }
+
+      /* Extra Color */
+      .baby-powder {
+        background-color: var(--baby-powder);
+      }
+
+      .baby-powder-text {
+        color: var(--baby-powder);
+      }
+
+      /* Brand Color Palette: Don't Disturb! */
+      /*=====================================*/
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+
+      /* Materialize Sticky Footer */
+      /* ===== DO NOT DISTURB ===== */
+
+      #brand-logo-img {
+        position: relative;
+        top: -14px;
+        left: 6px;
+        max-width: 90px;
+      }
+
+      @media screen and (max-width: 600px) {
+        #brand-logo-img {
+          max-width: 80px;
+        }
+      }
+
+      p {
+        font-size: 2.799rem;
+      }
+    </style>
   </head>
 
   <body>
 
-    
+      <!-- Navbar -->
+      <div class="navbar-fixed">
+        <nav class="baby-powder">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left">
+              <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
+            </a>
+            <ul class="right show-on-large">
+              <li>
+                <a href="sass.html" class="carnation-text"><i class="material-icons">home</i></a>
+              </li>
+              <li>
+                <a href="badges.html" class="carnation-text"><i class="material-icons">help</i></a>
+              </li>
+              <li>
+                <a href="badges.html" class="carnation-text"><i class="material-icons">book</i></a>
+              </li>
+              <li>
+                <a href="#!" class="dropdown-trigger carnation-text" data-target="dropdown_notification"><i class="material-icons">notifications_none</i></a>
+              </li>
+              <li>
+                <a href="#" data-target="slide-out"
+                  class="sidenav-trigger show-on-large">
+                  <i class="material-icons carnation-text">menu</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+
+      <!-- Notification -->
+      <ul id="dropdown_notification" class="dropdown-content">
+        <!-- <li><a href="#!">one<span class="badge">1</span></a></li> -->
+        <li><a href="#!">two <span class="new badge">1</span></a></li>
+        <!-- <li><a href="#!">three</a></li> -->
+      </ul>
+
+
+      <!-- Content -->
+      <main class="container section baby-powder grey-text text-darken-3">
+        <div class="section container">
+          <h5>Attribution Link:</h5>
+          <div class="center-align section gothic">
+            <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
+          </div>
+        </div>        
+      </main>
+
+
+      <!-- Sidenav -->
+      <ul id="slide-out" class="sidenav ming">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="assets/img/UserProfileBackground.png">
+        </div>
+        <img class="circle" src="assets/users_assets/users_img/john-doe.jpg">
+        <p class="ming-text name">John Doe</p>
+        <p class="ming-text email">jdandturk@gmail.com</p>
+      </div></li>
+      <li>
+        <a class="subheader blue-text text-lighten-4 center-align"><b>Tindakan</b></a>
+        <div class="container"><div class="container">
+          <div class="divider"></div>
+        </div></div>
+      </li>
+      <li><a href="#!" class="blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">settings</i>Pengaturan Akun</a></li>
+      <li><a href="#!" class="blue-text text-lighten-4"><i class="fas fa-sign-out-alt fa-lg blue-text text-lighten-4"></i>Keluar</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="waves-effect blue-text text-lighten-4" href="#!">Link ...</a></li>
+    </ul>
+
+
+    <!-- Footer -->
+    <footer class="page-footer carnation grey-text text-darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col s3 hide-on-med-and-up"></div>
+          <div class="col s6 m5 l4">
+            <img src="assets/logo/BlokSiberLogo.png" alt="BlokSiber Logo" class="responsive-img" id="brand-logo-img-footer">
+          </div>
+          <div class="col s3 hide-on-med-and-up"></div>
+          <div class="col s12 center-align hide-on-med-and-up">
+            <h5 class="white-text">Terhubung dengan BlokSiber:</h5>
+            <!-- line -->
+            <div class="container"><div class="container"><div class="container">
+              <div class="container">
+                <div class="container"><div class="divider"></div></div>
+              </div>
+            </div></div></div>
+            <!-- /line -->
+          </div>
+          <div class="col s12 hide-on-med-and-up">
+            <div class="container section">
+              <div class="container">
+                <div class="row">
+                  <div class="col s3">
+                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram fa-4x"></i></a>
+                  </div>
+                  <div class="col s3">
+                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-facebook-square fa-4x"></i></a>
+                  </div>
+                  <div class="col s3">
+                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-whatsapp fa-4x"></i></a>
+                  </div>
+                  <div class="col s3">
+                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-github fa-4x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+      <div class="footer-copyright">
+        <div class="container">
+        BlokSiber © 2022
+        <a class="grey-text text-lighten-4 right" href="index.html">BlokSiber</a>
+        </div>
+      </div>
+    </footer>
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!-- <script src="index.js"></script> -->
+
+  <script>
+    
+    $(document).ready(function() {
+      $('.dropdown-trigger').dropdown();
+      $(".sidenav").sidenav();
+    });
+
+  </script>
   </body>
 </html>
