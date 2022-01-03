@@ -64,12 +64,28 @@
         color: var(--gothic);
       }
 
+      .gothic {
+        background-color: var(--gothic) !important;
+      }
+
+      .gothic-text {
+        color: var(--gothic) !important;
+      }
+
       .carnation {
         background-color: var(--carnation);
       }
 
       .carnation-text {
         color: var(--carnation);
+      }
+
+      .carnation {
+        background-color: var(--carnation) !important;
+      }
+
+      .carnation-text {
+        color: var(--carnation) !important;
       }
 
       .mandys-pink {
@@ -80,12 +96,28 @@
         color: var(--mandys-pink);
       }
 
+      .mandys-pink {
+        background-color: var(--mandys-pink) !important;
+      }
+
+      .mandys-pink-text {
+        color: var(--mandys-pink) !important;
+      }
+
       .ming {
         background-color: var(--ming);
       }
 
       .ming-text {
         color: var(--ming);
+      }
+
+      .ming {
+        background-color: var(--ming) !important;
+      }
+
+      .ming-text {
+        color: var(--ming) !important;
       }
 
       /* Extra Color */
@@ -95,6 +127,14 @@
 
       .baby-powder-text {
         color: var(--baby-powder);
+      }
+
+      .baby-powder {
+        background-color: var(--baby-powder) !important;
+      }
+
+      .baby-powder-text {
+        color: var(--baby-powder) !important;
       }
 
       /* Brand Color Palette: Don't Disturb! */
@@ -127,7 +167,7 @@
       }
 
       p {
-        font-size: 2.799rem;
+        font-size: 1.297rem;
       }
     </style>
   </head>
@@ -138,21 +178,24 @@
       <div class="navbar-fixed">
         <nav class="baby-powder">
           <div class="nav-wrapper">
-            <a href="#!" class="brand-logo left">
+            <a href="#!" class="brand-logo left hide-on-small-only">
+              <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
+            </a>
+            <a href="#!" class="brand-logo center hide-on-med-and-up">
               <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
             <ul class="right show-on-large">
               <li>
-                <a href="sass.html" class="carnation-text"><i class="material-icons">home</i></a>
+                <a href="index.html" class="carnation-text hide-on-small-only"><i class="material-icons">home</i></a>
               </li>
               <li>
-                <a href="badges.html" class="carnation-text"><i class="material-icons">help</i></a>
+                <a href="" class="carnation-text hide-on-small-only"><i class="material-icons">help</i></a>
               </li>
               <li>
-                <a href="badges.html" class="carnation-text"><i class="material-icons">book</i></a>
+                <a href="" class="carnation-text hide-on-small-only"><i class="material-icons">book</i></a>
               </li>
               <li>
-                <a href="#!" class="dropdown-trigger carnation-text" data-target="dropdown_notification"><i class="material-icons">notifications_none</i></a>
+                <a href="#!" class="dropdown-trigger carnation-text hide-on-small-only" data-target="dropdown_notification"><i class="material-icons">notifications_none</i></a>
               </li>
               <li>
                 <a href="#" data-target="slide-out"
@@ -165,6 +208,19 @@
         </nav>
       </div>
 
+      <!-- Floating Notification (mobile devices only) -->
+      <div class="fixed-action-btn">
+        <a href="#!" class="btn-floating z-depth-1 baby-powder hide-on-med-and-up" data-target="dropdown_notification">
+          <i class="material-icons carnation-text">notifications_none</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">insert_chart</i></a></li>
+          <li><a class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">format_quote</i></a></li>
+          <li><a class="btn-floating green tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+            
 
       <!-- Notification -->
       <ul id="dropdown_notification" class="dropdown-content">
@@ -176,6 +232,41 @@
 
       <!-- Content -->
       <main class="container section baby-powder grey-text text-darken-3">
+        <div class="section container">
+          <h4>Tentang Kami</h4>
+          <p>
+            Kami memiliki cita-cita untuk berusaha memutuskan 'miskin ilmu' dan 'literasi rendah' di kalangan pemuda-pemudi di Indonesia.
+            Dengan program '<i>unggah pengetahuan kamu</i>' dan sistem chat real-time yang dapat digunakan untuk saling bertukar pikiran
+            atau ide. Sehingga kamu dapat mengetahui informasi-informasi dari orang lain.
+          </p>
+          <p class="right-align">
+            Mari kembangkan dunia kita dengan saling berbagi kebaikan dan berusaha untuk menciptakan kebaikan untuk semua.
+          </p>
+          <h5 class="center">Salam Kami</h5>
+          <div class="container section">
+            <div class="row">
+              <div class="col m6 l5 hide-on-small-only">
+                <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img">
+              </div>
+              <div class="col m6 l7 center-align hide-on-small-only">
+                <p>
+                  Hawari Muflih Munte
+                </p>
+              </div>
+              <div class="col s2 hide-on-med-and-up"></div>
+              <div class="col s8 hide-on-med-and-up">
+                <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img z-depth-2">
+              </div>
+              <div class="col s2 hide-on-med-and-up"></div>
+              <div class="col s12 hide-on-med-and-up">
+                <p class="center">
+                  Hawari Muflih Munte
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
         <div class="section container">
           <h5>Attribution Link:</h5>
           <div class="center-align section gothic">
@@ -205,6 +296,17 @@
       <li><a href="#!" class="blue-text text-lighten-4"><i class="fas fa-sign-out-alt fa-lg blue-text text-lighten-4"></i>Keluar</a></li>
       <li><div class="divider"></div></li>
       <li><a class="waves-effect blue-text text-lighten-4" href="#!">Link ...</a></li>
+      <!-- Mobile Only -->
+      <li class="divider"></li>
+      <li>
+        <a href="index.html" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">home</i>Beranda</a>
+      </li>
+      <li>
+        <a href="" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">help</i>Tentang</a>
+      </li>
+      <li>
+        <a href="" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">book</i>Baca</a>
+      </li>
     </ul>
 
 
@@ -264,7 +366,12 @@
   <script>
     
     $(document).ready(function() {
+      $('.fixed-action-btn').floatingActionButton({
+        direction: 'top',
+        hoverEnabled: false,
+      });
       $('.dropdown-trigger').dropdown();
+      $('.tooltipped').tooltip();
       $(".sidenav").sidenav();
     });
 
