@@ -153,6 +153,26 @@
       /* Materialize Sticky Footer */
       /* ===== DO NOT DISTURB ===== */
 
+      /* my customized styling */
+      .sm-padding {
+        padding: 0.760px;
+      }
+
+      .sm-radius {
+        border-radius: 1.875px;
+      }
+
+      /* jQuery scroll event */
+      .nav-scrolled {
+        box-shadow: 0 0.25px 2.355px var(--carnation);
+      }
+
+      .nav-transition {
+        transition: all 0.8s ease;
+      }
+
+      /* ========================== */
+
       #brand-logo-img {
         position: relative;
         top: -14px;
@@ -169,6 +189,7 @@
       p {
         font-size: 1.297rem;
       }
+
     </style>
   </head>
 
@@ -176,12 +197,12 @@
 
       <!-- Navbar -->
       <div class="navbar-fixed">
-        <nav class="baby-powder">
+        <nav class="baby-powder nav-scrolled nav-transition">
           <div class="nav-wrapper">
-            <a href="#!" class="brand-logo left hide-on-small-only">
+            <a href="index.html" class="brand-logo left hide-on-small-only">
               <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
-            <a href="#!" class="brand-logo center hide-on-med-and-up">
+            <a href="index.html" class="brand-logo center hide-on-med-and-up">
               <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
             <ul class="right show-on-large">
@@ -189,18 +210,24 @@
                 <a href="index.html" class="carnation-text hide-on-small-only"><i class="material-icons">home</i></a>
               </li>
               <li>
-                <a href="" class="carnation-text hide-on-small-only"><i class="material-icons">help</i></a>
+                <a href="#tentang" class="carnation-text hide-on-small-only"><i class="material-icons">help</i></a>
               </li>
               <li>
-                <a href="" class="carnation-text hide-on-small-only"><i class="material-icons">book</i></a>
+                <a href="#baca" class="carnation-text hide-on-small-only"><i class="material-icons">book</i></a>
               </li>
               <li>
                 <a href="#!" class="dropdown-trigger carnation-text hide-on-small-only" data-target="dropdown_notification"><i class="material-icons">notifications_none</i></a>
               </li>
               <li>
                 <a href="#" data-target="slide-out"
-                  class="sidenav-trigger show-on-large">
+                  class="sidenav-trigger show-on-large hide-on-small-only">
                   <i class="material-icons carnation-text">menu</i>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-target="slide-out"
+                  class="sidenav-trigger hide-on-med-and-up">
+                  <i class="material-icons carnation-text">account_box</i>
                 </a>
               </li>
             </ul>
@@ -208,19 +235,44 @@
         </nav>
       </div>
 
-      <!-- Floating Notification (mobile devices only) -->
-      <div class="fixed-action-btn">
-        <a href="#!" class="btn-floating z-depth-1 baby-powder hide-on-med-and-up" data-target="dropdown_notification">
-          <i class="material-icons carnation-text">notifications_none</i>
+      <!-- Floating Menu (mobile devices only) -->
+      <div class="fixed-action-btn scrollspy-custom">
+        <a href="#!" class="btn-floating z-depth-2 baby-powder hide-on-med-and-up">
+          <i class="material-icons carnation-text">menu</i>
         </a>
         <ul>
-          <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">insert_chart</i></a></li>
-          <li><a class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">format_quote</i></a></li>
-          <li><a class="btn-floating green tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">publish</i></a></li>
-          <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="lorem ipsum"><i class="material-icons">attach_file</i></a></li>
+          <li>
+            <a href="#beranda" class="btn-floating z-depth-2 gothic hide-on-med-and-up">
+              <i class="material-icons">home</i>
+            </a>
+          </li>
+          <li>
+            <a href="#tentang" class="btn-floating z-depth-2 carnation hide-on-med-and-up">
+              <i class="material-icons">help</i>
+            </a>
+          </li>
+          <li>
+            <a href="#baca" class="btn-floating z-depth-2 ming hide-on-med-and-up">
+              <i class="material-icons">book</i>
+            </a>
+          </li>
+          <li>
+            <a href="#!" class="btn-floating z-depth-2 carnation hide-on-med-and-up">
+              <i class="material-icons">notifications_none</i>
+            </a>
+          </li>
+          <li>
+            <a href="#support" class="btn-floating z-depth-2 gothic hide-on-med-and-up">
+              <i class="material-icons">headset_mic</i>
+            </a>
+          </li>
+          <li>
+            <a href="#chat-modal" class="btn-floating z-depth-2 carnation hide-on-med-and-up modal-trigger">
+              <i class="material-icons">chat</i>
+            </a>
+          </li>
         </ul>
       </div>
-            
 
       <!-- Notification -->
       <ul id="dropdown_notification" class="dropdown-content">
@@ -232,19 +284,53 @@
 
       <!-- Content -->
       <main class="container section baby-powder grey-text text-darken-3">
+        <div id="beranda" class="section"><div class="section"><!-- Just for spacing --></div></div>
         <div class="section container">
-          <h4>Tentang Kami</h4>
-          <p>
+          <!-- On Medium & Up -->
+          <!-- ### CODE ### -->
+
+          <!-- On Small Only -->
+          <h5 class="center-align hide-on-med-and-up">Beranda</h5>
+          <p class="center-align hide-on-med-and-up">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div id="tentang" class="section"><div class="section"><!-- Just for spacing --></div></div>
+        <div class="section container">
+          <!-- On Medium & Up -->
+          <h4 class="hide-on-small-only">Tentang Kami</h4>
+          <p class="hide-on-small-only">
             Kami memiliki cita-cita untuk berusaha memutuskan 'miskin ilmu' dan 'literasi rendah' di kalangan pemuda-pemudi di Indonesia.
             Dengan program '<i>unggah pengetahuan kamu</i>' dan sistem chat real-time yang dapat digunakan untuk saling bertukar pikiran
             atau ide. Sehingga kamu dapat mengetahui informasi-informasi dari orang lain.
           </p>
-          <p class="right-align">
-            Mari kembangkan dunia kita dengan saling berbagi kebaikan dan berusaha untuk menciptakan kebaikan untuk semua.
+          <p class="right-align hide-on-small-only">
+            Mari kembangkan dunia kita menuju dunia yang lebih baik dengan saling berbagi
+            kebaikan dan sekaranglah saatnya untuk mewujudkannya. Kalau bukan kita, siapa lagi ?
           </p>
+
+          <!-- On Small Only -->
+          <h5 class="center-align hide-on-med-and-up">Tentang Kami</h5>
+          <p class="center-align hide-on-med-and-up">
+            Kami memiliki cita-cita untuk berusaha memutuskan 'miskin ilmu' dan 'literasi rendah' di kalangan pemuda-pemudi di Indonesia.
+            Dengan program '<i>unggah pengetahuan kamu</i>' dan sistem chat real-time yang dapat digunakan untuk saling bertukar pikiran
+            atau ide. Sehingga kamu dapat mengetahui informasi-informasi dari orang lain.
+          </p>
+          <p class="center-align hide-on-med-and-up">
+            Mari kembangkan dunia kita menuju dunia yang lebih baik dengan saling berbagi
+            kebaikan dan sekaranglah saatnya untuk mewujudkannya. Kalau bukan kita, siapa lagi ?
+          </p>
+
           <h5 class="center">Salam Kami</h5>
           <div class="container section">
             <div class="row">
+              <!-- On Med & Up -->
               <div class="col m6 l5 hide-on-small-only">
                 <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img">
               </div>
@@ -253,6 +339,8 @@
                   Hawari Muflih Munte
                 </p>
               </div>
+
+              <!-- On Small Only -->
               <div class="col s2 hide-on-med-and-up"></div>
               <div class="col s8 hide-on-med-and-up">
                 <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img z-depth-2">
@@ -267,17 +355,103 @@
             </div>
           </div>
         </div>
+
+        <div id="support" class="section"><div class="section"><!-- Just for spacing --></div></div>
+        <div class="section container">
+          <!-- On Medium & Up -->
+          <h5 class="hide-on-small-only">Bantuan</h5>
+          <p class="hide-on-small-only">
+            Kami memiliki cita-cita untuk berusaha memutuskan 'miskin ilmu' dan 'literasi rendah' di kalangan pemuda-pemudi di Indonesia.
+            Dengan program '<i>unggah pengetahuan kamu</i>' dan sistem chat real-time yang dapat digunakan untuk saling bertukar pikiran
+            atau ide. Sehingga kamu dapat mengetahui informasi-informasi dari orang lain.
+          </p>
+          <p class="right-align hide-on-small-only">
+            Mari kembangkan dunia kita menuju dunia yang lebih baik dengan saling berbagi
+            kebaikan dan sekaranglah saatnya untuk mewujudkannya. Kalau bukan kita, siapa lagi ?
+          </p>
+
+          <!-- On Small Only -->
+          <h5 class="center-align hide-on-med-and-up">Bantuan</h5>
+          <p class="center hide-on-med-and-up">
+            Bingung dengan sistem dan ketentuan dari kami ?
+            <br><br>
+            Hubungi aja Customer Service kami melalui Whatsapp:
+            <br>
+            <i class="fab fa-whatsapp fa-lg green-text"></i> <span class="green lighten-2 white-text sm-padding sm-radius">+62 812-6594-2424</span>
+          </p>
+
+          <div class="section"></div>
+
+          <h5 class="center-align hide-on-med-and-up">FAQ (Frequently Asked Question)</h5>
+          <p class="center-align hide-on-med-and-up grey-text text-darken-1">PSD (Pertanyaan yang Sering Diajukan)</p>
+          <ul class="collapsible z-depth-0">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons ming-text">comment</i>
+                <span class="ming-text">Masih bingung dengan platform BlokSiber ?</span>
+              </div>
+              <div class="collapsible-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons ming-text">comment</i>
+                <span class="ming-text">Mau kenalan sama Developer BlokSiber ?</span>
+              </div>
+              <div class="collapsible-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons ming-text">comment</i>
+                <span class="ming-text">Perlu bayar gak nih disini ?</span>
+              </div>
+              <div class="collapsible-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <div class="section container">
           <h5>Attribution Link:</h5>
-          <div class="center-align section gothic">
+          <div class="center-align section gothic white-text">
+            <p>John Doe - ex. name</p>
             <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
+            <br>
+            <p>T-Rex Hexagon</p>
+            <a href="https://www.freepik.com/vectors/background" class="white-text">Background vector created by starline - www.freepik.com</a>
           </div>
-        </div>        
+        </div>
+
       </main>
 
 
       <!-- Sidenav -->
-      <ul id="slide-out" class="sidenav ming">
+      <ul id="slide-out" class="sidenav carnation">
       <li><div class="user-view">
         <div class="background">
           <img src="assets/img/UserProfileBackground.png">
@@ -296,17 +470,6 @@
       <li><a href="#!" class="blue-text text-lighten-4"><i class="fas fa-sign-out-alt fa-lg blue-text text-lighten-4"></i>Keluar</a></li>
       <li><div class="divider"></div></li>
       <li><a class="waves-effect blue-text text-lighten-4" href="#!">Link ...</a></li>
-      <!-- Mobile Only -->
-      <li class="divider"></li>
-      <li>
-        <a href="index.html" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">home</i>Beranda</a>
-      </li>
-      <li>
-        <a href="" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">help</i>Tentang</a>
-      </li>
-      <li>
-        <a href="" class="hide-on-med-and-up blue-text text-lighten-4"><i class="material-icons blue-text text-lighten-4">book</i>Baca</a>
-      </li>
     </ul>
 
 
@@ -352,8 +515,7 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
       <div class="footer-copyright">
-        <div class="container">
-        BlokSiber © 2022
+        <div class="container"> BlokSiber © 2022
         <a class="grey-text text-lighten-4 right" href="index.html">BlokSiber</a>
         </div>
       </div>
@@ -364,15 +526,46 @@
 	<!-- <script src="index.js"></script> -->
 
   <script>
-    
+    // Get all the hyperlink elements
+    var links = document.getElementsByTagName("a");
+
+    // Browse the previously created array
+    Array.prototype.forEach.call(links, function(elem, index) {
+    // Get the hyperlink target and if it refers to an id go inside condition
+    var elemAttr = elem.getAttribute("href");
+      if(elemAttr && elemAttr.includes("#")) {
+        // Replace the regular action with a scrolling to target on click
+        elem.addEventListener("click", function(ev) {
+          ev.preventDefault();
+          // Scroll to the target element using replace() and regex to find the href's target id
+          document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest"
+              });
+        });
+      }
+    });
+
     $(document).ready(function() {
       $('.fixed-action-btn').floatingActionButton({
         direction: 'top',
         hoverEnabled: false,
       });
+      // $('.scrollspy').scrollSpy(); # Works on Text-Only
       $('.dropdown-trigger').dropdown();
+      $('.collapsible').collapsible();
       $('.tooltipped').tooltip();
-      $(".sidenav").sidenav();
+      $('.sidenav').sidenav();
+
+      // Scroll event:
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          $('nav').removeClass('nav-scrolled');
+        } else {
+          $('nav').addClass('nav-scrolled');
+        }
+      });
     });
 
   </script>
