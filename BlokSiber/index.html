@@ -87,6 +87,11 @@
       .carnation-text {
         color: var(--carnation) !important;
       }
+      /* faded version */
+      .carnation-faded {
+        --carnation: #FB5F5FF0;
+        background-color: var(--carnation) !important;
+      }
 
       .mandys-pink {
         background-color: var(--mandys-pink);
@@ -158,6 +163,10 @@
         padding: 0.760px;
       }
 
+      .m-padding {
+        padding: 8.4195px;
+      }
+
       .sm-radius {
         border-radius: 1.875px;
       }
@@ -166,17 +175,99 @@
         font-size: 1.0276rem;
       }
 
-      .custom-bg {
-        background: #D0E4F5 url("assets/img/sidenav-background.png") no-repeat fixed 0 0;
+      .custom-bg-a {
+        background:
+          #D0E4F5
+          url("assets/img/sidenav-background.png")
+          no-repeat
+          fixed
+          0 0;
+      }
+
+      .custom-bg-b {
+        background:
+          #D0E4F5
+          url("assets/img/tile-background-a.png")
+          no-repeat
+          fixed
+          0 0; 
+      }
+
+      .custom-bg-c {
+        background:
+          #D0E4F5
+          url("assets/img/tile-background-b.png")
+          no-repeat
+          fixed
+          0 0; 
+      }
+
+      .custom-bg-d {
+        background:
+          #D0E4F5
+          url("assets/img/tile-background-c.png")
+          no-repeat
+          fixed
+          0 0; 
       }
 
       .bold-text {
         font-weight: bold !important;
       }
 
-      .shadow-text-1 {
-        text-shadow: 0 0.8925px 0.625px var(--gothic);
+      /* Hover effect */
+      .my-hover-1 {
+        transition: all 0.75s linear;
       }
+
+      .my-hover-1:hover {
+        color: var(--ming-text) !important;
+      }
+
+      /* Background Fading */
+      .bg-fade-1 {
+        background: rgba(255, 255, 255, 0.884);
+      }
+
+      .bg-fade-2 {
+        background: rgba(255, 255, 255, 0.684);
+      }
+
+      /* CSS Layout */
+
+      /* Custom Card #*/
+      .card_ {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+
+      .card_:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .card_title {
+        font-size: 1.265rem;
+        font-weight: 600;
+      }
+
+      .card_subtitle {
+        font-size: 1.0925rem;
+      }
+
+      a.card_link {
+        display: block;
+        padding: 6.0px;
+        width: 100%;
+        border-radius: 2px;
+
+        /* button link */
+        --carnation: #FB5F5F97;
+        background: var(--carnation);
+        color: var(--baby-powder);
+      }
+      /* # Custom Card */
+
+      /* ================================== */
 
       /* jQuery scroll event */
       .nav-scrolled {
@@ -202,6 +293,13 @@
         }
       }
 
+      .mobile-logo {
+        position: relative;
+        top: 0px !important;
+        left: 0px !important;
+        max-width: 80px !important;
+      }
+
       p {
         font-size: 1.297rem;
       }
@@ -209,21 +307,21 @@
     </style>
   </head>
 
-  <body>
+  <body class="baby-powder custom-bg-d">
 
       <!-- Navbar -->
-      <div class="navbar-fixed">
-        <nav class="baby-powder nav-scrolled nav-transition">
+      <div class="navbar-fixed hide-on-med-and-up">
+        <nav class="carnation-faded nav-scrolled nav-transition">
           <div class="nav-wrapper">
             <a href="index.html" class="brand-logo left hide-on-small-only">
               <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
             <a href="index.html" class="brand-logo center hide-on-med-and-up">
-              <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
+              <img src="assets/logo/BlokSiberAlt.svg" class="responsive-img mobile-logo" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
             <ul class="right show-on-large">
               <li>
-                <a href="index.html" class="carnation-text hide-on-small-only"><i class="material-icons">home</i></a>
+                <a href="#beranda" class="carnation-text hide-on-small-only"><i class="material-icons">home</i></a>
               </li>
               <li>
                 <a href="#tentang" class="carnation-text hide-on-small-only"><i class="material-icons">help</i></a>
@@ -232,7 +330,9 @@
                 <a href="#baca" class="carnation-text hide-on-small-only"><i class="material-icons">book</i></a>
               </li>
               <li>
-                <a href="#!" class="dropdown-trigger carnation-text hide-on-small-only" data-target="dropdown_notification"><i class="material-icons">notifications_none</i></a>
+                <a href="#!" class="dropdown-trigger carnation-text hide-on-small-only" data-target="dropdown_notification">
+                  <i class="material-icons">notifications_none</i>
+                </a>
               </li>
               <li>
                 <a href="#" data-target="slide-out"
@@ -243,7 +343,7 @@
               <li>
                 <a href="#" data-target="slide-out"
                   class="sidenav-trigger hide-on-med-and-up">
-                  <i class="material-icons large carnation-text">account_box</i>
+                  <i class="material-icons large grey-text text-lighten-3">account_box</i>
                 </a>
               </li>
             </ul>
@@ -251,60 +351,63 @@
         </nav>
       </div>
 
-      <!-- Floating Menu (mobile devices only) -->
-      <div class="fixed-action-btn scrollspy-custom">
-        <a href="#!" class="btn-floating btn-large z-depth-3 carnation hide-on-med-and-up">
-          <i class="material-icons large white-text">menu</i>
-        </a>
-        <ul>
-          <li>
-            <a href="#beranda" class="btn-floating btn-large z-depth-3 white hide-on-med-and-up">
-              <i class="material-icons carnation-text">home</i>
-            </a>
-          </li>
-          <li>
-            <a href="#tentang" class="btn-floating btn-large z-depth-3 carnation hide-on-med-and-up">
-              <i class="material-icons">help</i>
-            </a>
-          </li>
-          <li>
-            <a href="#baca" class="btn-floating btn-large z-depth-3 white hide-on-med-and-up">
-              <i class="material-icons ming-text">book</i>
-            </a>
-          </li>
-          <li>
-            <a href="#!" class="btn-floating btn-large z-depth-3 ming hide-on-med-and-up">
-              <i class="material-icons">notifications_none</i>
-            </a>
-          </li>
-          <li>
-            <a href="#support" class="btn-floating btn-large z-depth-3 white hide-on-med-and-up">
-              <i class="material-icons gothic-text">headset_mic</i>
-            </a>
-          </li>
-          <li>
-            <a href="#chat-modal" class="btn-floating btn-large z-depth-2 gothic hide-on-med-and-up modal-trigger">
-              <i class="material-icons">chat</i>
-            </a>
-          </li>
-        </ul>
-      </div>
 
       <!-- Sidenav -->
-      <ul id="slide-out" class="sidenav custom-bg">
+      <ul id="slide-out" class="sidenav custom-bg-d">
         <li><div class="user-view">
           <div class="background">
-            <img src="assets/img/UserProfileBackground.png">
+            <img src="assets/img/tile-background-c.png">
           </div>
           <img class="circle" src="assets/users_assets/users_img/john-doe.jpg">
           <p class="ming-text name">John Doe</p>
           <p class="ming-text email">jdandturk@gmail.com</p>
         </div></li>
+        <li class="divider"></li>
         <li><a href="#!" class="carnation-text bold-text shadow-text-1"><i class="material-icons carnation-text">settings</i>Pengaturan Akun</a></li>
         <li><a href="#!" class="carnation-text bold-text shadow-text-1"><i class="fas fa-sign-out-alt fa-lg carnation-text"></i>Keluar</a></li>
         <li><div class="divider"></div></li>
         <li><a class="waves-effect carnation-text bold-text shadow-text-1" href="#!">Link ...</a></li>
       </ul>
+
+
+      <!-- Floating Menu (mobile devices only) -->
+      <div class="fixed-action-btn scrollspy-custom">
+        <a href="#!" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+          <i class="material-icons large white-text">menu</i>
+        </a>
+        <ul>
+          <li>
+            <a href="#beranda" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
+              <i class="material-icons carnation-text">home</i>
+            </a>
+          </li>
+          <li>
+            <a href="#tentang" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+              <i class="material-icons">help</i>
+            </a>
+          </li>
+          <li>
+            <a href="#konten-blog" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
+              <i class="material-icons carnation-text">book</i>
+            </a>
+          </li>
+          <li>
+            <a href="#!" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+              <i class="material-icons white-text">notifications_none</i>
+            </a>
+          </li>
+          <li>
+            <a href="#support" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
+              <i class="material-icons carnation-text">headset_mic</i>
+            </a>
+          </li>
+          <li>
+            <a href="#chat-modal" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up modal-trigger">
+              <i class="material-icons white-text">chat</i>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Notification -->
       <ul id="dropdown_notification" class="dropdown-content">
@@ -315,7 +418,7 @@
 
 
       <!-- Content -->
-      <main class="container section baby-powder grey-text text-darken-3">
+      <main class="section grey-text text-darken-3">
         <div id="beranda" class="section"><div class="section"><!-- Just for spacing --></div></div>
         <div class="section container">
           <!-- On Medium & Up -->
@@ -361,27 +464,16 @@
 
           <div class="section"></div>
 
+
           <h5 class="center">Salam Kami</h5>
           <div class="container section">
             <div class="row">
               <!-- On Med & Up -->
-              <div class="col m6 l5 hide-on-small-only">
+              <!-- <div class="col m6 l5 hide-on-small-only">
                 <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img">
               </div>
               <div class="col m6 l7 center-align hide-on-small-only">
                 <p>
-                  Hawari Muflih Munte
-                </p>
-              </div>
-
-              <!-- On Small Only -->
-              <!-- <div class="col s2 hide-on-med-and-up"></div>
-              <div class="col s8 hide-on-med-and-up">
-                <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img z-depth-2">
-              </div>
-              <div class="col s2 hide-on-med-and-up"></div>
-              <div class="col s12 hide-on-med-and-up">
-                <p class="center">
                   Hawari Muflih Munte
                 </p>
               </div> -->
@@ -411,7 +503,7 @@
         </div>
 
         <div id="support" class="section"><div class="section"><!-- Just for spacing --></div></div>
-        <div class="section container">
+        <div class="section">
           <!-- On Medium & Up -->
           <h5 class="hide-on-small-only">Bantuan</h5>
           <p class="hide-on-small-only">
@@ -425,20 +517,38 @@
           </p>
 
           <!-- On Small Only -->
-          <h5 class="center-align hide-on-med-and-up">Bantuan</h5>
-          <p class="center hide-on-med-and-up">
-            Bingung dengan sistem dan ketentuan dari kami ?
-            <br><br>
-            Hubungi aja Customer Service kami melalui Whatsapp:
-            <br>
-            <i class="fab fa-whatsapp fa-lg green-text"></i> <span class="green lighten-2 white-text sm-padding sm-radius">+62 812-6594-2424</span>
-          </p>
+          <div class="custom-bg-c grey-text text-lighten-4">
+            <div class="section"></div>
+            <div class="container hide-on-med-and-up">
+              <div class="container"><div class="container"><div class="container"><div class="container left-align">
+                <h5>Bantuan</h5>
+                <div class="container">
+                  <p>Kamu kebingungan ?</p>
+                </div>
+              </div></div></div></div>
+            </div>
+            <p class="center hide-on-med-and-up">
+              <br>
+              Hubungi aja admin untuk info lebih lengkap
+              <br>
+              dibawah ini:
+              <br>
+              <i class="fab fa-whatsapp fa-lg green-text text-lighten-2"></i> <span class="green white-text sm-padding sm-radius">+62 812-6594-2424</span>
+            </p>
 
-          <div class="section"></div>
+            <div class="center">
+              <a href="https://wa.me/6281265942424?text=Halo%20kak.%20Saya%20mau%20ngobrol%20dong%20sama%20kakak.%20Ada%20yang%20mau%20saya%20tanyain%20nih..."
+                target="_blank" class="btn green z-depth-2">
+                <i class="material-icons right">send</i>
+                ngobrol yuk
+              </a>
+            </div>
 
-          <h5 class="center-align hide-on-med-and-up">FAQ (Frequently Asked Question)</h5>
-          <p class="center-align hide-on-med-and-up grey-text text-darken-1">PSD (Pertanyaan yang Sering Diajukan)</p>
-          <ul class="collapsible z-depth-0">
+            <div class="section"></div>
+
+            <h5 class="center-align hide-on-med-and-up">FAQ (Frequently Asked Question)</h5>
+            <p class="center-align hide-on-med-and-up grey-text text-darken-1">PSD (Pertanyaan yang Sering Diajukan)</p>
+            <ul class="collapsible z-depth-0">
             <li>
               <div class="collapsible-header">
                 <i class="material-icons ming-text">comment</i>
@@ -487,22 +597,52 @@
                 </p>
               </div>
             </li>
-          </ul>
+            </ul>
+          </div>
         </div>
 
-        <div class="section container">
-          <h5>Attribution Link:</h5>
-          <div class="center-align section gothic white-text">
-            <p>John Doe - ex. name</p>
-            <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
-            <br>
-            <p>T-Rex Hexagon</p>
-            <a href="https://www.freepik.com/vectors/background" class="white-text">Background vector created by starline - www.freepik.com</a>
+        <!-- Blog Content -->
+        <div id="konten-blog" class="section custom-bg-c"><div class="section custom-bg-c"><!-- Just for spacing --></div></div>
+        <div class="section custom-bg-b">
+          <div class="center bg-fade-2">
+            <div class="container">
+              <h5 class="grey-text text-darken-2">Konten Bacaan</h5>
+            </div>
+          </div>
+          <div class="row grey-text text-darken-2">
+            <div class="col s6">
+              <div class="card_ bg-fade-2 m-padding sm-radius center-align">
+                <img src="assets/logo/BlokSiberLogo.png" class="responsive-img">
+                <span class="card_title">Trend Bahasa Pemrograman 2022</span>
+                <br>
+                <span class="card_subtitle">Yuk baca</span>
+                <a href="#!" class="card_link"><i class="fas fa-book-reader fa-lg"></i></a>
+              </div>
+            </div>
+            <div class="col s6">
+              <div class="card_ bg-fade-2 m-padding sm-radius center-align">
+                <img src="assets/logo/BlokSiberLogo.png" class="responsive-img">
+                <span class="card_title">Web Developer Roadmap</span>
+                <br>
+                <span class="card_subtitle">Ingin jadi Web Developer ?<br>Baca selengkapnya disini</span>
+                <a href="#!" class="card_link"><i class="fas fa-book-reader fa-lg"></i></a>
+              </div>
+            </div>
           </div>
         </div>
 
       </main>
 
+      <div class="section container">
+        <h5>Attribution Link:</h5>
+        <div class="center-align section gothic white-text">
+          <p>John Doe - ex. name</p>
+          <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
+          <br>
+          <p>T-Rex Hexagon</p>
+          <a href="https://www.freepik.com/vectors/background" class="white-text">Background vector created by starline - www.freepik.com</a>
+        </div>
+      </div>
 
     <!-- Footer -->
     <footer class="page-footer carnation grey-text text-darken-3">
@@ -529,31 +669,40 @@
                 <div class="section"></div>
                 <div class="row">
                   <div class="col s3">
-                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a class="grey-text text-lighten-3 my-hover-1" href="#!"><i class="fab fa-instagram fa-2x"></i></a>
                   </div>
                   <div class="col s3">
-                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a class="grey-text text-lighten-3 my-hover-1" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
                   </div>
                   <div class="col s3">
-                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    <a class="grey-text text-lighten-3 my-hover-1" href="#!"><i class="fab fa-whatsapp fa-2x"></i></a>
                   </div>
                   <div class="col s3">
-                    <a class="grey-text text-lighten-3" href="#!"><i class="fab fa-github fa-2x"></i></a>
+                    <a class="grey-text text-lighten-3 my-hover-1" href="#!"><i class="fab fa-github fa-2x"></i></a>
                   </div>
                 </div>
                 <div class="section container">
                     <div class="container"><div class="container"><div class="container">
                       <div class="divider"></div>
                     </div></div></div>
+                </div>
+                <div class="row white-text">
+                  <div class="col s12">
+                    <i class="material-icons left">location_on</i>
+                    Desa Blang Pulo, Kota Lhokseumawe, Nanggroe Aceh Darussalam, Indonesia
                   </div>
+                </div>
               </div>
             </div>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
       <div class="footer-copyright">
-        <div class="container"> BlokSiber © 2022
-        <a class="grey-text text-lighten-4 right" href="index.html">BlokSiber</a>
+        <div class="container">
+          <p class="center-align hide-on-med-and-up">
+            BlokSiber © 2022  
+          </p>
+        <a class="grey-text text-lighten-4 right hide-on-small-only" href="index.html">BlokSiber</a>
         </div>
       </div>
     </footer>
@@ -594,6 +743,9 @@
       $('.collapsible').collapsible();
       $('.tooltipped').tooltip();
       $('.sidenav').sidenav();
+      $('.tabs').tabs({
+        swipeable: true
+      });
 
       // Scroll event:
       $(window).scroll(function() {
