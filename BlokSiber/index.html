@@ -125,6 +125,11 @@
         color: var(--ming) !important;
       }
 
+      .ming-faded {
+        --ming: #39747CF0;
+        background-color: var(--ming) !important;
+      }
+
       /* Extra Color */
       .baby-powder {
         background-color: var(--baby-powder);
@@ -167,8 +172,24 @@
         padding: 8.4195px;
       }
 
+      .l-padding {
+        padding: 18.495px;
+      }
+
       .sm-radius {
         border-radius: 1.875px;
+      }
+
+      .sl-transition {
+        transition: 1s;
+      }
+
+      .m-transition {
+        transition: 0.6s;
+      }
+
+      .f-transition {
+        transition: 0.1950s;
       }
 
       p.subtitle {
@@ -267,6 +288,26 @@
       }
       /* # Custom Card */
 
+      /* Custom Avatar # */
+      .avatar_ {
+          /* Rounded border */
+          border-radius: 50%;
+          height: 96px;
+          width: 96px;
+      }
+
+      .avatar__image {
+          display: block;
+
+          /* Rounded border */
+          border-radius: 50%;
+
+          /* Take full size */
+          height: 100%;
+          width: 100%;
+      }
+      /* # Custom Avatar */
+
       /* ================================== */
 
       /* jQuery scroll event */
@@ -309,37 +350,22 @@
 
   <body class="baby-powder custom-bg-d">
 
+      <!-- Mobile First Approach -->
+
       <!-- Navbar -->
       <div class="navbar-fixed hide-on-med-and-up">
         <nav class="carnation-faded nav-scrolled nav-transition">
           <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo left hide-on-small-only">
-              <img src="assets/logo/BlokSiber.svg" class="responsive-img" id="brand-logo-img" alt="BlokSiber Logo">
+            <ul class="left">
+              <li>
+                <a id="dark-mode"><i id="icon-status" class="material-icons">brightness_3</i></a>
+                <a id="light-mode" class="hide"><i id="icon-status" class="material-icons">brightness_7</i></a>
+              </li>
+            </ul>
+            <a href="index.html" class="brand-logo center hide-on-med-and-up sl-transition">
+              <img src="assets/logo/BlokSiberAlt.svg" class="responsive-img mobile-logo sl-transition" id="brand-logo-img" alt="BlokSiber Logo">
             </a>
-            <a href="index.html" class="brand-logo center hide-on-med-and-up">
-              <img src="assets/logo/BlokSiberAlt.svg" class="responsive-img mobile-logo" id="brand-logo-img" alt="BlokSiber Logo">
-            </a>
-            <ul class="right show-on-large">
-              <li>
-                <a href="#beranda" class="carnation-text hide-on-small-only"><i class="material-icons">home</i></a>
-              </li>
-              <li>
-                <a href="#tentang" class="carnation-text hide-on-small-only"><i class="material-icons">help</i></a>
-              </li>
-              <li>
-                <a href="#baca" class="carnation-text hide-on-small-only"><i class="material-icons">book</i></a>
-              </li>
-              <li>
-                <a href="#!" class="dropdown-trigger carnation-text hide-on-small-only" data-target="dropdown_notification">
-                  <i class="material-icons">notifications_none</i>
-                </a>
-              </li>
-              <li>
-                <a href="#" data-target="slide-out"
-                  class="sidenav-trigger show-on-large hide-on-small-only">
-                  <i class="material-icons carnation-text">menu</i>
-                </a>
-              </li>
+            <ul class="right">
               <li>
                 <a href="#" data-target="slide-out"
                   class="sidenav-trigger hide-on-med-and-up">
@@ -371,42 +397,56 @@
 
 
       <!-- Floating Menu (mobile devices only) -->
-      <div class="fixed-action-btn scrollspy-custom">
-        <a href="#!" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+      <div class="fixed-action-btn scrollspy-custom light-mode">
+        <a href="#!" class="btn-floating btn-large z-depth-2 hoverable red darken-1 hide-on-med-and-up">
           <i class="material-icons large white-text">menu</i>
         </a>
         <ul>
           <li>
-            <a href="#beranda" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
-              <i class="material-icons carnation-text">home</i>
+            <!-- light theme -->
+            <a href="#beranda" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+              <i class="material-icons white-text">home</i>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#tentang" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
               <i class="material-icons">help</i>
             </a>
-          </li>
+          </li> -->
           <li>
-            <a href="#konten-blog" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
-              <i class="material-icons carnation-text">book</i>
+            <!-- light theme -->
+            <a href="#konten-blog" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
+              <i class="material-icons white-text">book</i>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#!" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up">
               <i class="material-icons white-text">notifications_none</i>
             </a>
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a href="#support" class="btn-floating btn-large z-depth-3 hoverable white hide-on-med-and-up">
               <i class="material-icons carnation-text">headset_mic</i>
             </a>
-          </li>
+          </li> -->
           <li>
+            <!-- light theme -->
             <a href="#chat-modal" class="btn-floating btn-large z-depth-3 hoverable carnation hide-on-med-and-up modal-trigger">
               <i class="material-icons white-text">chat</i>
             </a>
           </li>
         </ul>
+      </div>
+
+      <!-- #chat-modal -->
+      <div id="chat-modal" class="modal modal-fixed-footer white-text custom-bg-b">
+        <div class="modal-content">
+          <p>Ingin buka obrolan ?</p>
+        </div>
+        <div class="modal-footer custom-bg-c bold-text">
+          <a href="#!" class="modal-close waves-effect btn-flat white-text">Ya</a>
+          <a class="modal-close waves-effect btn-flat white-text">Tidak</a>
+        </div>
       </div>
 
       <!-- Notification -->
@@ -418,7 +458,7 @@
 
 
       <!-- Content -->
-      <main class="section grey-text text-darken-3">
+      <main class="section grey-text text-darken-3 hide-on-med-and-up">
         <div id="beranda" class="section"><div class="section"><!-- Just for spacing --></div></div>
         <div class="section container">
           <!-- On Medium & Up -->
@@ -465,9 +505,10 @@
           <div class="section"></div>
 
 
-          <h5 class="center">Salam Kami</h5>
+          <h5 class="center-align">Salam Kami</h5>
           <div class="container section">
-            <div class="row">
+            <!-- <div class="row"> -->
+
               <!-- On Med & Up -->
               <!-- <div class="col m6 l5 hide-on-small-only">
                 <img src="assets/img/developer.jpg" alt="Developer Image" class="responsive-img">
@@ -479,7 +520,7 @@
               </div> -->
 
               <!-- On Small Only (Revised) -->
-              <ul class="collection">
+              <!-- <ul class="collection">
                 <li class="collection-item avatar">
                   <img src="assets/img/developer.jpg" alt="Developer Image" class="circle" loading="lazy">
                   <p class="title">Hawari Muflih Munte</p>
@@ -496,36 +537,75 @@
                   </p>
                   <a href="#!" class="secondary-content tooltipped" data-position="left" data-tooltip="Lihat Selengkapnya..."><i class="material-icons small carnation-text">contacts</i></a>
                 </li>
-              </ul>
+              </ul> -->
+
+              <div class="row">
+                <div class="col s1"></div>
+                <div class="col s10">
+                  <div class="card z-depth-2">
+                    <div class="card-image">
+                      <img src="assets/img/developer.jpg"
+                        alt="developer image" class="responsive-img materialboxed"
+                        data-caption="&#10070; Hawari Muflih Munte &#10070;">
+                    </div>
+                  </div>
+                  <p class="center-align">Hawari Muflih Munte</p>
+                  <p class="subtitle center-align">Web Developer</p>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s12 hide-on-med-and-up">
+                  <div class="container">
+                    <div class="container">
+                      <div class="divider gothic"></div>
+                      <div class="section"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ### -->
+                <div class="col s1"></div>
+                <div class="col s10">
+                  <div class="card z-depth-2">
+                    <div class="card-image">
+                      <img src="assets/img/developer.jpg"
+                        alt="developer image" class="responsive-img materialboxed"
+                        data-caption="&#10070; Hawari Muflih Munte &#10070;">
+                    </div>
+                  </div>
+                  <p class="center-align">Muhammad Fariz Rizki</p>
+                  <p class="subtitle center-align">Web Designer</p>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s12 hide-on-med-and-up">
+                  <div class="container">
+                    <div class="container">
+                      <div class="divider gothic"></div>
+                      <div class="section"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
-            </div>
+            <!-- </div> -->
           </div>
         </div>
 
         <div id="support" class="section"><div class="section"><!-- Just for spacing --></div></div>
         <div class="section">
-          <!-- On Medium & Up -->
-          <h5 class="hide-on-small-only">Bantuan</h5>
-          <p class="hide-on-small-only">
-            Kami memiliki cita-cita untuk berusaha memutuskan 'miskin ilmu' dan 'literasi rendah' di kalangan pemuda-pemudi di Indonesia.
-            Dengan program '<i>unggah pengetahuan kamu</i>' dan sistem chat real-time yang dapat digunakan untuk saling bertukar pikiran
-            atau ide. Sehingga kamu dapat mengetahui informasi-informasi dari orang lain.
-          </p>
-          <p class="right-align hide-on-small-only">
-            Mari kembangkan dunia kita menuju dunia yang lebih baik dengan saling berbagi
-            kebaikan dan sekaranglah saatnya untuk mewujudkannya. Kalau bukan kita, siapa lagi ?
-          </p>
-
           <!-- On Small Only -->
           <div class="custom-bg-c grey-text text-lighten-4">
             <div class="section"></div>
             <div class="container hide-on-med-and-up">
-              <div class="container"><div class="container"><div class="container"><div class="container left-align">
-                <h5>Bantuan</h5>
-                <div class="container">
-                  <p>Kamu kebingungan ?</p>
+              <h5>Bantuan</h5>
+              <div class="container">
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/img/curious.svg" alt="curious emoji" class="responsive-img">
+                  </div>
+                  <div class="col s9">
+                    <p>Bingung ?</p>
+                  </div>
                 </div>
-              </div></div></div></div>
+              </div>
             </div>
             <p class="center hide-on-med-and-up">
               <br>
@@ -533,7 +613,10 @@
               <br>
               dibawah ini:
               <br>
-              <i class="fab fa-whatsapp fa-lg green-text text-lighten-2"></i> <span class="green white-text sm-padding sm-radius">+62 812-6594-2424</span>
+              <span class="sm-padding sm-radius center-align">
+                <i class="fab fa-whatsapp fa-lg green circle white-text text-lighten-2"></i>  
+              </span> &nbsp;
+              <span class="green white-text sm-padding sm-radius z-depth-1">+62 812-6594-2424</span>
             </p>
 
             <div class="center">
@@ -546,8 +629,8 @@
 
             <div class="section"></div>
 
-            <h5 class="center-align hide-on-med-and-up">FAQ (Frequently Asked Question)</h5>
-            <p class="center-align hide-on-med-and-up grey-text text-darken-1">PSD (Pertanyaan yang Sering Diajukan)</p>
+            <!-- <h5 class="center-align hide-on-med-and-up">FAQ<br>(Frequently Asked Question)</h5> -->
+            <p class="center-align hide-on-med-and-up grey-text text-lighten-3">Pertanyaan yang sering ditanyakan</p>
             <ul class="collapsible z-depth-0">
             <li>
               <div class="collapsible-header">
@@ -633,19 +716,9 @@
 
       </main>
 
-      <div class="section container">
-        <h5>Attribution Link:</h5>
-        <div class="center-align section gothic white-text">
-          <p>John Doe - ex. name</p>
-          <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
-          <br>
-          <p>T-Rex Hexagon</p>
-          <a href="https://www.freepik.com/vectors/background" class="white-text">Background vector created by starline - www.freepik.com</a>
-        </div>
-      </div>
 
     <!-- Footer -->
-    <footer class="page-footer carnation grey-text text-darken-3">
+    <footer class="page-footer carnation grey-text text-darken-3 bg-fade-1 hide-on-med-and-up">
       <div class="container">
         <div class="row">
           <div class="col s3 hide-on-med-and-up"></div>
@@ -707,6 +780,9 @@
       </div>
     </footer>
 
+    <!-- Mobile First Approach -->
+    <!-- ##################################################### -->
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!-- <script src="index.js"></script> -->
@@ -738,14 +814,14 @@
         direction: 'top',
         hoverEnabled: false,
       });
+
       // $('.scrollspy').scrollSpy(); # Works on Text-Only
       $('.dropdown-trigger').dropdown();
+      $('.materialboxed').materialbox();
       $('.collapsible').collapsible();
       $('.tooltipped').tooltip();
       $('.sidenav').sidenav();
-      $('.tabs').tabs({
-        swipeable: true
-      });
+      $('.modal').modal();
 
       // Scroll event:
       $(window).scroll(function() {
@@ -755,8 +831,68 @@
           $('nav').addClass('nav-scrolled');
         }
       });
+
+      // Change theme:
+      $('#dark-mode').click(function() {
+        $(this).addClass('hide');
+        $(this).next().removeClass('hide');
+        $('nav').removeClass('carnation-faded').addClass('ming-faded');
+        $('img.mobile-logo').attr('src','assets/logo/BlokSiberAlt_2.svg');
+        // $('.fixed-action-btn')
+        //   .find('a.btn-floating.red.darken-1')
+        //   .removeClass('red, darken-1')
+        //   .addClass('ming');
+
+        // $('.fixed-action-btn')
+        //   .find('ul li a.btn-floating.carnation')
+        //   .addClass('hide');
+        // $('.fixed-action-btn')
+        //   .find('ul li a.btn-floating.ming')
+        //   .removeClass('hide');
+        
+      });
+
+      $('#light-mode').click(function() {
+        $(this).addClass('hide');
+        $(this).prev().removeClass('hide');
+        $('nav').removeClass('ming-faded').addClass('carnation-faded');
+        $('img.mobile-logo').attr('src','assets/logo/BlokSiberAlt.svg');
+        // $('.fixed-action-btn')
+        //   .find('a.btn-floating.ming')
+        //   .removeClass('ming')
+        //   .addClass('red, darken-1');
+
+        // $('.fixed-action-btn')
+        //   .find('ul li a.btn-floating.ming')
+        //   .addClass('hide');
+        // $('.fixed-action-btn')
+        //   .find('ul li a.btn-floating.carnation')
+        //   .removeClass('hide');
+
+      });
+
+      // if ($('#dark-mode').hasClass('hide')) {
+        
+      // }
+
+      // if ($('#light-mode').hasClass('hide') && ) {
+      // }
+
     });
 
   </script>
   </body>
 </html>
+
+<!--
+  <div class="section container">
+  <h5>Attribution Link:</h5>
+  <div class="center-align section gothic white-text">
+    <p>John Doe - ex. name</p>
+    <a href="https://www.freepik.com/photos/man" class="white-text">Man photo created by cookie_studio - www.freepik.com</a>
+    <br>
+    <p>T-Rex Hexagon</p>
+    <a href="https://www.freepik.com/vectors/background" class="white-text">Background vector created by starline - www.freepik.com</a>
+  </div>
+</div>
+-->
